@@ -27,7 +27,7 @@ def a_model(x, i_0, b, i_1):
     Fit model for 370.a
     :param x: variable parameter for kafe2
     :param i_0: intensity of light
-    :param b: correctional parameter for when phi_0 wasn't calculated correctly
+    :param b: correctional parameter to calculate phi_0
     :param i_1: intensity of not perfectly polarized light
     :return: model function
     '''
@@ -37,10 +37,10 @@ def a_model(x, i_0, b, i_1):
 def a_fit(x, y, x_err, y_err):
     '''
     Fit function to fit data according to 370.a.
-    :param x:
-    :param y:
-    :param x_err:
-    :param y_err:
+    :param x: angle analyser - angle polariser
+    :param y: intensity [V]
+    :param x_err: error value for x
+    :param y_err: error value for y
     :return:
     '''
     data = xy_data(x, y, x_err, y_err)
